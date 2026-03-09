@@ -11,19 +11,19 @@ prompt = "Why is Boot.dev such a great place to learn backend development? Use o
 client = genai.Client(api_key=api_key)
 response = client.models.generate_content(model='gemini-2.5-flash', contents= prompt)
     
+if  response.usage_metadata is None:
+    raise RuntimeError('no tokens used')
+
 usage=response.usage_metadata
 prompt_tokens = usage.prompt_token_count
 completion_tokens = usage.candidates_token_count
-totla_used = usage.total_token_count
+total_used = usage.total_token_count
 
-if  response.usage_metadata is None:
-    raise RuntimeError('no tokens used')
-else:
-    print(f'Prompt: {prompt}')
-    print(f'Response: {response.text}')
-    print(f'Prompt tokens: {prompt_tokens}')
-    print(f'Response tokens: {completion_tokens}')
-    print(f'Total tokens: {totla_used}')
 
-print(response.text)
+print(f'Prompt: {prompt}')
+print(f'Response: {response.text}')
+print(f'Prompt tokens: {prompt_tokens}')
+print(f'Response tokens: {completion_tokens}')
+print(f'Total tokens: {total_used}')
+
 
