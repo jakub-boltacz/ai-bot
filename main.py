@@ -21,7 +21,9 @@ total_used = usage.total_token_count
 
 
 print(f'Prompt: {prompt}')
+print("-" * 20)
 print(f'Response: {response.text}')
+print("-" * 20)
 print(f'Prompt tokens: {prompt_tokens}')
 print(f'Response tokens: {completion_tokens}')
 print(f'Total tokens: {total_used}')
