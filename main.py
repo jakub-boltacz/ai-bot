@@ -34,5 +34,5 @@ if args.verbose:
     print(f'Response tokens: {completion_tokens}')
     print(f'Total tokens: {total_used}')
     print("-" * 20)
-    print(f'Prompt: {args.user_prompt}')
+    print(f'User prompt: {args.user_prompt}')
 
