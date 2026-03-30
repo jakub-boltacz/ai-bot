@@ -37,4 +37,7 @@ schema_get_files_info = types.FunctionDeclaration(
         },
     ),
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4d644ac9aa4705d76a751ec5f0866fe33be58d7
